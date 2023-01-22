@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anybody&family=Inter+Tight&family=Nunito:wght@300;400;600;700;800;900&family=Orbitron:wght@400;500&family=Oswald:wght@400;500&family=Poppins:wght@300&family=Roboto+Mono&family=Rubik+Microbe&family=Sevillana&display=swap');
+
+::selection{
+
+  background-color:rgb(37, 179, 37);
+color: #fff;
+
+  
+}
+
+body{
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+.UnitTemp, .UnitLength,.time, .mass{
+    width: 400px;
+    height: 600px;
+    margin-bottom: 100px;
+  }
+  .card{
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+    height: 730px;
+   
+
+  }
+  h4{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-size: 25px; */
+  }
+
+
+  .button,.featureBtn{
+    text-align: center;    
+    border: 0;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding-top: 6px;
+    background-color:#0b120e ;
+    color: #ffff;
+    font-size: 35px ;
+    margin: 5px;
+    transition: .5s ease;
+  }
+
+  input{
+    text-align:right;
+  }
+
+  .minus{
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    padding: 5px;
+  }
+
+
+  .fa-angle-left{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px 15px;
+    background-color: black;
+    cursor: pointer;
+
+  }
+  .fa-angle-left:hover{
+    background-color: #1f2f25;
+  }
+  .featureBtn{
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    font-size: 22px;
+    padding: 5px;
+    background-color: black;
+    cursor: pointer;
+
+  }
+  
+  .row{
+    margin: 0px 20px;
+    /* margin-left: 50px; */
+  }
+  .operators{
+    color:rgb(37, 179, 37);
+  }
+
+  #unitDisplay, #unitDisplay2{
+  color: #c7c7c7;
+}
+
+#list,#list2{
+    background-color:#1f2f25;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    border: none;
+}
+
+#list option,#list2 option{
+    background-color: #1f2f25;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+
+  .button:hover{
+    background-color:#49504c ;
+    scale: 0.9; 
+    cursor: pointer;
+  }
+
+  #backspace{
+    color:rgb(37, 179, 37);
+    background-color: black;
+    
+  }
+
+  .featureBtn:hover{
+    background-color: #1f2f25;
+    color:rgb(37, 179, 37);
+  }
+
+  #backspace:hover{
+    color:rgb(22, 241, 22);
+    /* background-color: #1f2f25; */
+  }
+.tab{
+  text-decoration: none;
+  color: #cfcfcf;
+  font-size: 16px;
+  font-weight: 600;
+  transition: .5s;
+  padding: 5px 10px;
+}
+  .tab:hover{
+  color: #fff;
+  background-color: #1f2f25;
+  }
+
+#length,#temp,#mass,#time{
+  color: #fff;
+  background-color: #1f2f25;
+}

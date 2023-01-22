@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    
+<div class="container UnitTemp">
+    <div class="card mt-5 bg-black text-light" style="border-radius: 15px; background-color: rgb(0, 0, 0);">
+        <div class="card-body fs-5 ">
+
+          <h4 class="card-title ms-0"><i onclick="Calculator()" class="fa fa-angle-left"></i>Unit Converter</h4>
+
+          <!-- <a class="tab rounded-pill" onclick="CalcCentimeters()" value="l" href="UnitLength.html" role="button">Length</a> -->
+         <a class="tab rounded-pill" onclick="CalcCentimeters()" value="l" href="UnitLength.html" type="button">Length</a>
+          <a id="temp" class="tab rounded-pill" onclick="CalcCentimeters()" value="T" href="UnitTemp.html" role="button">Temperature</a>
+          <a class="tab rounded-pill" onclick="CalcCentimeters()" value="m" href="UnitMass.html" role="button">Mass</a>
+          <a class="tab rounded-pill" onclick="CalcCentimeters()" value="t" href="UnitTime.html" role="button">Time</a>
+
+
+          <!-- input box -->
+          <div class="dropdown mt-3">
+            <select id="list" onchange="CalcCentimeters()" class="btn btn-dark dropdown-toggle text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <option value="℃" selected="selected" class="dropdown-item" href="#">Celsius (℃)</option>
+              <option value="℉"  class="dropdown-item" href="#">Fahrenheit (℉)</option>
+              <option value="K" class="dropdown-item" href="#">Kelvin (K)</option>
+            </select>
+          </div>
+
+          <input id="unit" type="text" placeholder="0" class="container-fluid  fs-1 mt-3 bg-black text-light" style="border:1px solid black; height: 50px; width:300px;"> <label id="unitDisplay" for="">℃</label>
+          <hr>
+
+          <div class="dropdown">
+            <select id="list2" onchange="CalcCentimeters()" class="btn btn-dark dropdown-toggle text-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <option value="℃"  class="dropdown-item" href="#">Celsius (℃)</option>
+              <option value="℉" selected="selected" class="dropdown-item" href="#">Fahrenheit (℉)</option>
+              <option value="K" class="dropdown-item" href="#">Kelvin (K)</option>
+            </select>
+          </div>
+
+          <input id="unit2" type="text" placeholder="0" class="container-fluid fs-1 mt-3 bg-black text-light" style="border:1px solid black; height: 50px; width:300px;"> <label id="unitDisplay2" for="">℉</label>
+          <hr>
+
+            <div class="row row-cols-4">
+
+              &nbsp;<div id="Calculator" class=" featureBtn" onclick="Calculator() "><i  class="fa-solid fa-calculator"></i></div>
+              <div class="button minus " onclick="displayLength('-')">-</i></div>
+              <div> </div>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <div id="backspace" class="button featureBtn" onclick="backspace()"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+              </svg></div>
+            </div>            
+          <hr>
+          
+            <div class="row row-cols-4">
+              <div class="button" onclick="displayLength(6)">6</div>
+              <div class="button" onclick="displayLength(7)">7</div>
+              <div class="button" onclick="displayLength(8)">8</div>
+              <div class="button" onclick="displayLength(9)">9</div>
+            </div>
+          
+            <div class="row row-cols-4">
+              <div class="button" onclick="displayLength(2)">2</div>
+              <div class="button" onclick="displayLength(3)">3</div>
+              <div class="button" onclick="displayLength(4)">4</i></div>
+              <div class="button" onclick="displayLength(5)">5</div>
+            </div>
+                      
+            <div class="row row-cols-4 mb-2">
+              <div class="button" onclick="displayLength(1)">1</div>
+              <div class="button" onclick="displayLength(0)">0</div>
+              <div class="button" onclick="displayLength('.')">.</i></div>
+              <div class="button text-danger" onclick="clearBox()">C</div>
+            </div>
+          
+          <!-- <a href="#" class="btn btn-primary mt-3">Go somewhere</a> -->
+        </div>
+      </div>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
